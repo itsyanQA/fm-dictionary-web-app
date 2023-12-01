@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap");
+
+:root {
+  --lightest-gray: #f4f4f4;
+  --lighter-gray: #e9e9e9;
+  --medium-gray: #757575;
+  --dark-gray: #3a3a3a;
+  --darker-gray: #2d2d2d;
+  --darkest-gray: #1f1f1f;
+  --almost-black: #050505;
+  --warning-red: #ff5252;
+  --purple-magic: #a445ed;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}

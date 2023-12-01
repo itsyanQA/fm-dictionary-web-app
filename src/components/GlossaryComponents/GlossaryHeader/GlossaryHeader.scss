@@ -1,0 +1,45 @@
+.glossary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  &__typography-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__word {
+    color: var(--darker-gray);
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  &__phonetic {
+    color: var(--purple-magic);
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__play-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    & > svg > g > circle,
+    & > svg > g > path {
+      transition: all 250ms ease-out;
+    }
+
+    &:hover {
+      & > svg > g > circle {
+        opacity: 100%;
+      }
+
+      & > svg > g > path {
+        fill: var(--white);
+      }
+    }
+  }
+}

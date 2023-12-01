@@ -1,0 +1,31 @@
+.term-not-found {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  align-items: center;
+  gap: 40px;
+
+  &__sad-face {
+    font-size: 64px;
+  }
+
+  &__typography-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__header {
+    color: var(--darker-gray);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__description {
+    color: var(--medium-gray);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

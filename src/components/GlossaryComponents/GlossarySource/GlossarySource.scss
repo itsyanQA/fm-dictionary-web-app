@@ -1,0 +1,25 @@
+.glossary-source {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+
+  &__source-text {
+    color: var(--medium-gray);
+    font-size: 14px;
+    text-decoration-line: underline;
+  }
+
+  &__link-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__url-text {
+    color: var(--darker-gray);
+    font-size: 14px;
+    text-decoration-line: underline;
+  }
+}

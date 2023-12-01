@@ -1,0 +1,79 @@
+.glossary-description {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-bottom: 40px;
+
+  &__part-of-speech-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__part-of-speech {
+    color: var(--darker-gray);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  &__small-heading {
+    color: var(--medium-gray);
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__meaning-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__meanings-list {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__meaning-list-item {
+    color: var(--darker-gray);
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 8px;
+
+    &::marker {
+      color: var(--purple-magic);
+    }
+  }
+
+  &__meaning-list-item-example {
+    color: var(--medium-gray);
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 8px;
+
+    &::before,
+    &::after {
+      content: "“";
+    }
+  }
+
+  &__synonyms {
+    display: flex;
+    gap: 22px;
+  }
+
+  &__synonyms-list {
+    list-style-type: none;
+    display: flex;
+    gap: 10px 30px;
+    flex-wrap: wrap;
+  }
+
+  &__synonym-list-item {
+    color: var(--purple-magic);
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
