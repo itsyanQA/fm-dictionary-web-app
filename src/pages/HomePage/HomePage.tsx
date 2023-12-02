@@ -7,6 +7,7 @@ import { useFetchDictionary } from "../../hooks/useFetchDictionary";
 import { TermNotFound } from "../../components/TermNotFound/TermNotFound";
 import { Glossary } from "../../components/GlossaryComponents/Glossary/Glossary";
 import { Loader } from "../../components/UI/Loader/Loader";
+import CodedBy from "../../components/UI/CodedBy/CodedBy";
 
 export function HomePage() {
   const [searchValue, setSearchValue] = useState<string | undefined>("");
@@ -37,6 +38,7 @@ export function HomePage() {
         didSubmitForm={didSubmitForm}
       />
       {renderDictionaryResult()}
+      {isValidData && <CodedBy />}
     </main>
   );
 }
