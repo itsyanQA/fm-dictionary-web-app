@@ -1,5 +1,5 @@
 import "./SearchBar.scss";
-import { useState, Dispatch, SetStateAction, useEffect } from "react";
+import { useState, Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/icon-search.svg";
 
 type SearchBarProps = {
@@ -10,10 +10,14 @@ type SearchBarProps = {
 };
 
 export function SearchBar(props: SearchBarProps) {
+  const searchBarInputRef = useRef<HTMLInputElement | null>(null);
   const { searchValue, setSearchValue, setDidSubmitForm, didSubmitForm } = props;
   const [isInputError, setIsInputError] = useState<boolean>(false);
 
-  useEffect(() => setSearchValue(""), [didSubmitForm]);
+  useEffect(() => {
+    setSearchValue("");
+    searchBarInputRef?.current?.blur();
+  }, [didSubmitForm]);
 
   return (
     <div className="search-bar">
@@ -36,6 +40,7 @@ export function SearchBar(props: SearchBarProps) {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search for any word..."
+          ref={searchBarInputRef}
         />
         <button className="search-bar__icon">
           <SearchIcon />
