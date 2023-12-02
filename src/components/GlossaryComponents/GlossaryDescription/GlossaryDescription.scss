@@ -4,6 +4,10 @@
   gap: 35px;
   margin-bottom: 40px;
 
+  @media screen and (max-width: 600px) {
+    margin-bottom: 35px;
+  }
+
   &__part-of-speech-container {
     display: flex;
     gap: 20px;
@@ -15,12 +19,20 @@
     font-size: 24px;
     font-style: italic;
     font-weight: 700;
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+    }
   }
 
   &__small-heading {
     color: var(--medium-gray);
     font-size: 20px;
     font-weight: 400;
+
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+    }
   }
 
   &__meaning-container {
@@ -34,6 +46,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (max-width: 600px) {
+      gap: 15px;
+    }
   }
 
   &__meaning-list-item {
@@ -41,6 +57,10 @@
     font-size: 18px;
     font-weight: 400;
     padding-left: 8px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+    }
 
     &::marker {
       color: var(--purple-magic);
@@ -52,6 +72,10 @@
     font-size: 18px;
     font-weight: 400;
     padding-left: 8px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+    }
 
     &::before,
     &::after {
@@ -75,5 +99,9 @@
     color: var(--purple-magic);
     font-size: 20px;
     font-weight: 700;
+
+    @media screen and (max-width: 600px) {
+      font-size: 16px;
+    }
   }
 }

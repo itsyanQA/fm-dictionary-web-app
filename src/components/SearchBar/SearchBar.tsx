@@ -1,16 +1,19 @@
 import "./SearchBar.scss";
-import { useState, Dispatch, SetStateAction } from "react";
+import { useState, Dispatch, SetStateAction, useEffect } from "react";
 import { ReactComponent as SearchIcon } from "../../assets/icon-search.svg";
 
 type SearchBarProps = {
   searchValue: string | undefined;
   setSearchValue: Dispatch<SetStateAction<string | undefined>>;
   setDidSubmitForm: Dispatch<SetStateAction<boolean>>;
+  didSubmitForm: boolean;
 };
 
 export function SearchBar(props: SearchBarProps) {
-  const { searchValue, setSearchValue, setDidSubmitForm } = props;
+  const { searchValue, setSearchValue, setDidSubmitForm, didSubmitForm } = props;
   const [isInputError, setIsInputError] = useState<boolean>(false);
+
+  useEffect(() => setSearchValue(""), [didSubmitForm]);
 
   return (
     <div className="search-bar">
@@ -32,6 +35,7 @@ export function SearchBar(props: SearchBarProps) {
           type="search"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
+          placeholder="Search for any word..."
         />
         <button className="search-bar__icon">
           <SearchIcon />

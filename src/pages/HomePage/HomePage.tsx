@@ -14,7 +14,7 @@ export function HomePage() {
   const { data, isLoading }: DictionaryFetchStates = useFetchDictionary(searchValue, didSubmitForm);
   const isInvalidTerm = (data as DictionaryTermNotFound)?.message;
   const isValidData = Array.isArray(data);
-  
+
   const renderDictionaryResult = (): JSX.Element | null => {
     if (isLoading) {
       return <Loader />;
@@ -30,7 +30,12 @@ export function HomePage() {
   return (
     <main className="home-container">
       <Header />
-      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} setDidSubmitForm={setDidSubmitForm} />
+      <SearchBar
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        setDidSubmitForm={setDidSubmitForm}
+        didSubmitForm={didSubmitForm}
+      />
       {renderDictionaryResult()}
     </main>
   );

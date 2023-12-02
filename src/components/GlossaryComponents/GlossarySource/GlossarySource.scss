@@ -4,6 +4,12 @@
   margin-top: 20px;
   align-items: center;
 
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: unset;
+    gap: 5px;
+  }
+
   &__source-text {
     color: var(--medium-gray);
     font-size: 14px;

@@ -5,6 +5,11 @@
   border-left: 1px solid var(--lighter-gray);
   padding-left: 20px;
 
+  @media screen and (max-width: 600px) {
+    gap: 10px;
+    padding-left: 16px;
+  }
+
   &__toggle {
     display: flex;
     border-radius: 20px;
