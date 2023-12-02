@@ -10,8 +10,8 @@ export function FontSelect() {
   const selectPaperProps: Record<"sx", CSSProperties> = {
     sx: {
       borderRadius: "16px",
-      background: "var(white)",
-      boxShadow: "0px 5px 30px 0px rgba(0, 0, 0, 0.10)",
+      background: "var(--paper)",
+      boxShadow: "var(--box-shadow)",
       padding: "12px 15px",
     },
   };

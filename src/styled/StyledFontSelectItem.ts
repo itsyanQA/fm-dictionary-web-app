@@ -1,7 +1,7 @@
 import { styled, MenuItem } from "@mui/material";
 
 export const StyledFontSelectItem = styled(MenuItem)(({ theme }) => ({
-  color: "var(--darker-gray)",
+  color: "var(--main-text-color)",
   fontSize: "18px",
   fontWeight: "700",
   backgroundColor: "transparent",

@@ -1,7 +1,7 @@
 import { styled, Select } from "@mui/material";
 
 export const StyledFontSelect = styled(Select)(({ theme }) => ({
-  color: "var(--darker-gray)",
+  color: "var(--main-text-color)",
   fontSize: "18px",
   fontWeight: "700",
   "& fieldset": {
