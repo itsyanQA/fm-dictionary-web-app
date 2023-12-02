@@ -1,4 +1,3 @@
-import "./FontSelect.scss";
 import { StyledFontSelect } from "../../styled/StyledFontSelect";
 import { StyledFontSelectItem } from "../../styled/StyledFontSelectItem";
 import { ReactComponent as ArrowDownIcon } from "../../assets/icon-arrow-down.svg";
@@ -13,6 +12,7 @@ export function FontSelect() {
       background: "var(--paper)",
       boxShadow: "var(--box-shadow)",
       padding: "12px 15px",
+      marginTop: "20px",
     },
   };
 
@@ -22,25 +22,22 @@ export function FontSelect() {
   }, [selectedFont]);
 
   return (
-    <div className="font-select-container">
-      <StyledFontSelect
-        defaultValue="sans-serif"
-        IconComponent={() => null}
-        value={selectedFont}
-        onChange={(e) => setSelectedFont(e.target.value as FontOption)}
-        MenuProps={{ PaperProps: selectPaperProps }}
-      >
-        <StyledFontSelectItem disableRipple className="font-option font-option--is-sans-serif" value="Inter">
-          Sans Serif
-        </StyledFontSelectItem>
-        <StyledFontSelectItem disableRipple className="font-option font-option--is-serif" value="Lora">
-          Serif
-        </StyledFontSelectItem>
-        <StyledFontSelectItem disableRipple className="font-option font-option--is-mono" value="Inconsolata">
-          Mono
-        </StyledFontSelectItem>
-      </StyledFontSelect>
-      <ArrowDownIcon />
-    </div>
+    <StyledFontSelect
+      defaultValue="sans-serif"
+      value={selectedFont}
+      onChange={(e) => setSelectedFont(e.target.value as FontOption)}
+      MenuProps={{ PaperProps: selectPaperProps }}
+      IconComponent={ArrowDownIcon}
+    >
+      <StyledFontSelectItem disableRipple className="font-option font-option--is-sans-serif" value="Inter">
+        Sans Serif
+      </StyledFontSelectItem>
+      <StyledFontSelectItem disableRipple className="font-option font-option--is-serif" value="Lora">
+        Serif
+      </StyledFontSelectItem>
+      <StyledFontSelectItem disableRipple className="font-option font-option--is-mono" value="Inconsolata">
+        Mono
+      </StyledFontSelectItem>
+    </StyledFontSelect>
   );
 }
