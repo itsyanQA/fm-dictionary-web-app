@@ -24,6 +24,24 @@
   --box-shadow: 0px 5px 30px 0px #a445ed;
 }
 
+[data-theme-mode="light"] {
+  --main-text-color: #2d2d2d;
+  --secondary-text-color: #f4f4f4;
+  --bg-color: #ffffff;
+  --paper: #ffffff;
+  --box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-text-color: #ffffff;
+    --secondary-text-color: #1f1f1f;
+    --bg-color: #050505;
+    --paper: #1f1f1f;
+    --box-shadow: 0px 5px 30px 0px #a445ed;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +54,7 @@ body {
   padding: 0 35px;
   min-width: 280px;
   background-color: var(--bg-color);
+  transition: background-color 250ms ease-out;
 
   @media screen and (max-width: 600px) {
     padding: 0 25px;

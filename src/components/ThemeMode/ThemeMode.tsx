@@ -2,8 +2,19 @@ import { useState, useEffect } from "react";
 import "./ThemeMode.scss";
 import { ReactComponent as MoonIcon } from "../../assets/icon-moon.svg";
 
+const getIsToggledInitialValue = (): boolean => {
+  if (
+    localStorage.getItem("themeMode") === "dark" ||
+    (window.matchMedia("(prefers-color-scheme: dark)") && localStorage.getItem("themeMode") !== "light")
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
 export function ThemeMode() {
-  const [isToggled, setIsToggled] = useState<boolean>(false);
+  const [isToggled, setIsToggled] = useState<boolean>(getIsToggledInitialValue);
 
   const themeClickHandler = () => setIsToggled((prevState) => !prevState);
 
