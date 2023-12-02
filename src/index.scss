@@ -46,6 +46,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: color, background-color 200ms ease-out;
 }
 
 body {
@@ -54,7 +55,7 @@ body {
   padding: 0 35px;
   min-width: 280px;
   background-color: var(--bg-color);
-  transition: background-color 250ms ease-out;
+  overflow: hidden;
 
   @media screen and (max-width: 600px) {
     padding: 0 25px;
