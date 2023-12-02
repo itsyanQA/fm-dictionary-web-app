@@ -93,6 +93,10 @@
     display: flex;
     gap: 10px 30px;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 600px) {
+      gap: 5px 15px;
+    }
   }
 
   &__synonym-list-item {

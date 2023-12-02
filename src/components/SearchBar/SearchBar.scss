@@ -23,6 +23,14 @@
     &--is-error:not(:focus) {
       border: 1px solid var(--warning-red);
     }
+
+    @media screen and (max-width: 600px) {
+      height: 48px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
   }
 
   &__icon {

@@ -9,5 +9,8 @@ export const StyledFontSelect = styled(Select)(({ theme }) => ({
   },
   "& .MuiSelect-select": {
     padding: "0 !important",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+    },
   },
 }));
