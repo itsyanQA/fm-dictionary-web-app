@@ -3,6 +3,7 @@ export type FontOption = "Inter" | "Lora" | "Inconsolata";
 export type DictionaryFetchStates = {
   data: Dictionary[] | DictionaryTermNotFound | undefined;
   isLoading: boolean;
+  isFetching: boolean;
 };
 
 export type Dictionary = {

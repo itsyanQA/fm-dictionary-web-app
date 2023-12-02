@@ -3,11 +3,11 @@ import { DictionaryFetchStates } from "../types";
 import { getDictionaryTerm } from "../api/queries";
 
 export const useFetchDictionary = (searchTerm: string | undefined, isFormSubmit: boolean) => {
-  const { data, isLoading }: DictionaryFetchStates = useQuery({
+  const { data, isLoading, isFetching }: DictionaryFetchStates = useQuery({
     queryKey: ["getDictionary", isFormSubmit],
     queryFn: () => getDictionaryTerm(searchTerm),
     refetchOnWindowFocus: false,
   });
 
-  return { data, isLoading };
+  return { data, isLoading, isFetching };
 };

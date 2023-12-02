@@ -11,12 +11,12 @@ import { Loader } from "../../components/UI/Loader/Loader";
 export function HomePage() {
   const [searchValue, setSearchValue] = useState<string | undefined>("");
   const [didSubmitForm, setDidSubmitForm] = useState<boolean>(false);
-  const { data, isLoading }: DictionaryFetchStates = useFetchDictionary(searchValue, didSubmitForm);
+  const { data, isLoading, isFetching }: DictionaryFetchStates = useFetchDictionary(searchValue, didSubmitForm);
   const isInvalidTerm = (data as DictionaryTermNotFound)?.message;
   const isValidData = Array.isArray(data);
 
   const renderDictionaryResult = (): JSX.Element | null => {
-    if (isLoading) {
+    if (isLoading || isFetching) {
       return <Loader />;
     } else if (isInvalidTerm) {
       return <TermNotFound />;
